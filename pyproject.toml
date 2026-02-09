@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "data-agent"
+version = "0.1.0"
+description = "A SQL agent that connects to Supabase and uses Anthropic Claude for natural language queries"
+requires-python = ">=3.10"
+dependencies = [
+    "langchain>=0.3",
+    "langchain-anthropic>=0.3",
+    "langchain-community>=0.3",
+    "sqlalchemy>=2.0",
+    "psycopg2-binary>=2.9",
+    "supabase>=2.0",
+    "python-dotenv>=1.0",
+]
+
+[project.scripts]
+data-agent = "data_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
