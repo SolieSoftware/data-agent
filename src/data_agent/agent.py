@@ -26,7 +26,7 @@ class SupabaseQueryAgent:
 
         db_uri = (
             f"postgresql://postgres.{project_ref}:{supabase_key}"
-            f"@aws-0-us-west-1.pooler.supabase.com:6543/postgres"
+            f"@aws-1-eu-west-2.pooler.supabase.com:5432/postgres"
         )
 
         self.db = SQLDatabase.from_uri(db_uri)
